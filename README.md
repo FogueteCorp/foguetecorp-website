@@ -1,6 +1,157 @@
-# foguetecorp.com
-Foguete Corp website
+# Athlete Portfolio Website
 
-Inspirations:
-https://www.mathieu-crepel.com/
-https://www.allianceinteractive.com/blog/best-athlete-website-examples/
+A modern, dark-themed professional portfolio website for athletes with smooth animations and interactive effects.
+
+## Features
+
+- 🎨 **Dark Mode Design** - Professional dark theme with orange accent colors
+- ✨ **Smooth Animations** - Page load animations and hover effects
+- 📱 **Fully Responsive** - Optimized for desktop, tablet, and mobile
+- 🎯 **Interactive Elements** - Lightsaber effect on stats, scaling social buttons
+- 🖼️ **Photo Gallery** - Showcase your best moments
+- 📧 **Contact Form** - Easy way for people to reach out
+- 🔗 **Social Links** - Connect all your social media platforms
+
+## Project Structure
+
+```
+athlete-portfolio/
+├── index.html          # Main HTML file
+├── css/
+│   └── styles.css     # All styles and animations
+├── images/
+│   ├── hero/          # Hero section background
+│   ├── profile/       # About section photo
+│   ├── gallery/       # Gallery photos (6 images)
+│   └── contact/       # Contact section photo
+└── README.md          # This file
+```
+
+## Setup Instructions
+
+### 1. Clone or Download
+
+```bash
+git clone https://github.com/yourusername/athlete-portfolio.git
+cd athlete-portfolio
+```
+
+### 2. Add Your Images
+
+Place your images in the appropriate folders:
+
+- **Hero Background**: `images/hero/hero-background.jpg` (Recommended: 1920x1080px)
+- **Profile Photo**: `images/profile/profile-photo.jpg` (Recommended: 800x1000px)
+- **Gallery Photos**: `images/gallery/training-01.jpg` through `action-06.jpg` (Recommended: 1000x1000px each)
+- **Contact Photo**: `images/contact/contact-photo.jpg` (Recommended: 800x1000px)
+
+### 3. Customize Content
+
+Edit `index.html` and replace:
+
+- **Athlete Name** - Your name throughout the site
+- **About Text** - Your personal story and achievements
+- **Stats** - Your actual statistics (Years Pro, Competitions, Championships)
+- **Social Links** - Update URLs in the social section to your actual profiles
+- **Contact Form** - Add form handling (see below)
+
+### 4. Run Locally
+
+Simply open `index.html` in your web browser, or use a local server:
+
+```bash
+# Using Python 3
+python -m http.server 8000
+
+# Using Node.js (http-server)
+npx http-server
+```
+
+Then visit `http://localhost:8000`
+
+## Customization Guide
+
+### Change Colors
+
+Edit `css/styles.css` and modify the CSS variables:
+
+```css
+:root {
+    --primary-dark: #0f0f0f;        /* Main background */
+    --secondary-dark: #1a1a1a;      /* Section backgrounds */
+    --text-primary: #e8e8e8;        /* Main text color */
+    --text-secondary: #a0a0a0;      /* Secondary text */
+    --border-dark: #2a2a2a;         /* Border color */
+    --accent-orange: #ff6b35;       /* Accent color */
+    --accent-orange-hover: #ff8555; /* Hover accent */
+}
+```
+
+### Add Contact Form Functionality
+
+The form is currently HTML-only. To make it functional, you can:
+
+**Option 1: Use Formspree (Recommended)**
+```html
+<form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+```
+
+**Option 2: Use Netlify Forms**
+```html
+<form class="contact-form" name="contact" method="POST" data-netlify="true">
+```
+
+**Option 3: Custom Backend**
+Add your own backend API endpoint.
+
+## Deployment
+
+### GitHub Pages
+
+1. Push your code to GitHub
+2. Go to repository Settings → Pages
+3. Select main branch as source
+4. Your site will be live at `https://yourusername.github.io/athlete-portfolio`
+
+### Netlify
+
+1. Push code to GitHub
+2. Connect repository to Netlify
+3. Deploy automatically
+
+### Custom Domain
+
+Update the domain settings in your hosting provider and add a CNAME file if needed.
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## Performance Tips
+
+1. **Optimize Images**: Use tools like TinyPNG or ImageOptim
+2. **Use WebP Format**: For better compression
+3. **Lazy Loading**: Add `loading="lazy"` to images
+4. **CDN**: Consider using a CDN for faster loading
+
+## License
+
+This project is free to use for personal portfolios.
+
+## Credits
+
+- Font: [Inter](https://fonts.google.com/specimen/Inter) by Google Fonts
+- Icons: Inline SVG icons
+- Design: Custom modern dark theme
+
+## Support
+
+For issues or questions, please open an issue on GitHub.
+
+---
+
+**Made with ❤️ for athletes who want to showcase their journey**
