@@ -392,6 +392,21 @@ nav {
     overflow: hidden;
 }
 
+/* Regla especial para móviles: fuerza una sola línea ocultando el texto y dejando solo los iconos centrados */
+@media (max-width: 650px) {
+    .social-links {
+        gap: 0.75rem;
+    }
+    .social-link {
+        padding: 1rem;
+        flex: 1;
+        justify-content: center;
+    }
+    .social-name {
+        display: none;
+    }
+}
+
 .social-link::before {
     content: '';
     position: absolute;
@@ -440,20 +455,7 @@ nav {
     font-weight: 500;
 }
 
-/* Regla especial para móviles: fuerza una sola línea ocultando el texto y dejando solo los iconos centrados */
-@media (max-width: 650px) {
-    .social-links {
-        gap: 0.75rem;
-    }
-    .social-link {
-        padding: 1rem;
-        flex: 1;
-        justify-content: center;
-    }
-    .social-name {
-        display: none;
-    }
-}
+
 
 
 /* Contact Section */
