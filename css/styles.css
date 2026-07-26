@@ -1,12 +1,11 @@
 /* =========================================
-   VARIABLES DE COLOR (¡Tu Nueva Paleta!)
+   VARIABLES DE COLOR (Versión Original)
    ========================================= */
 :root {
-    --bg-color: #0e1316;         /* Ink Black - Fondo principal */
-    --surface-color: #151b1f;    /* Un tono sutilmente más claro que Ink Black para tarjetas */
-    --text-color: #e8e6e3;       /* Blanco roto/arena claro para textos largos (muy legible) */
-    --primary-color: #ed7117;    /* Pumpkin Spice - Detalles principales, H2 y botones */
-    --secondary-color: #685b4e;  /* Stone Brown - Bordes, subtítulos y acentos tierra */
+    --bg-color: #0a0a0a;         /* Negro cinematográfico */
+    --surface-color: #141414;    /* Gris muy oscuro */
+    --text-color: #e0e0e0;       /* Blanco roto / Off-white */
+    --primary-color: #ff6600;    /* Naranja Foguete */
 }
 
 /* =========================================
@@ -21,7 +20,8 @@
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    /* Aquí aplicamos la tipografía Inter que importamos en el HTML */
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
 }
 
@@ -31,8 +31,8 @@ body {
 header {
     text-align: center;
     padding: 4rem 1rem;
-    background: linear-gradient(to bottom, #050708, var(--bg-color));
-    border-bottom: 2px solid var(--secondary-color); /* Usamos Stone Brown aquí para no saturar de naranja */
+    background: linear-gradient(to bottom, #000000, var(--bg-color));
+    border-bottom: 2px solid var(--primary-color);
 }
 
 h1 {
@@ -40,6 +40,7 @@ h1 {
     font-size: 2.8rem;
     margin-bottom: 0.5rem;
     letter-spacing: 1px;
+    font-weight: 700;
 }
 
 .subtitle {
@@ -47,6 +48,7 @@ h1 {
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-weight: 600;
 }
 
 /* =========================================
@@ -63,19 +65,21 @@ main {
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 10px;
-    border: 1px solid var(--secondary-color); /* Bordes en Stone Brown para un toque natural */
+    border: 1px solid #222;
 }
 
 h2 {
     color: var(--primary-color);
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 h3 {
     color: #ffffff;
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 /* =========================================
@@ -93,8 +97,7 @@ h3 {
     min-width: 250px;
     padding: 1.5rem;
     border-left: 3px solid var(--primary-color);
-    /* Un fondo ligerísimo mezclando tu Pumpkin Spice */
-    background-color: rgba(237, 113, 23, 0.05); 
+    background-color: rgba(255, 102, 0, 0.05);
     border-radius: 0 8px 8px 0;
 }
 
@@ -103,7 +106,7 @@ h3 {
    ========================================= */
 .documentales-highlight {
     border-color: var(--primary-color);
-    box-shadow: 0 0 15px rgba(237, 113, 23, 0.1); /* Brillo sutil Pumpkin Spice */
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.1);
 }
 
 /* =========================================
@@ -130,14 +133,14 @@ h3 {
     padding: 0.8rem 1.8rem;
     border-radius: 5px;
     border: 2px solid var(--primary-color);
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
     transition: all 0.3s ease;
 }
 
 .btn:hover, .contact-btn {
     background-color: var(--primary-color);
-    color: var(--bg-color); /* Texto en Ink Black al hacer hover */
+    color: #000;
 }
 
 /* =========================================
@@ -147,6 +150,6 @@ footer {
     text-align: center;
     padding: 2rem;
     font-size: 0.9rem;
-    color: var(--secondary-color); /* Stone Brown para un footer elegante y discreto */
-    border-top: 1px solid var(--secondary-color);
+    color: #666;
+    border-top: 1px solid #222;
 }
