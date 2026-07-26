@@ -364,7 +364,10 @@ nav {
 }
 
 /* Social links — single row, never wraps */
-.social-section { background-color: var(--primary-dark); }
+.social-section {
+    background-color: var(--primary-dark);
+    padding: 6rem 2rem;
+}
 
 .social-links {
     display: flex;
