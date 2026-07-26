@@ -9,7 +9,21 @@
 }
 
 /* =========================================
-   ESTILOS GENERALES
+   ANIMACIONES DE ENTRADA (Page Load)
+   ========================================= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px); /* Empieza un poco más abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);    /* Termina en su posición original */
+    }
+}
+
+/* =========================================
+   ESTILOS GENERALES Y TEXTURA DE FONDO
    ========================================= */
 * {
     margin: 0;
@@ -19,8 +33,11 @@
 
 body {
     background-color: var(--bg-color);
+    /* TRUCO DE TEXTURA: Añadimos un ruido visual SVG sutil + un brillo central */
+    background-image: 
+        radial-gradient(circle at 50% 0%, #1f1f1f 0%, transparent 70%),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
     color: var(--text-color);
-    /* Aquí aplicamos la tipografía Inter que importamos en el HTML */
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
 }
@@ -31,8 +48,10 @@ body {
 header {
     text-align: center;
     padding: 4rem 1rem;
-    background: linear-gradient(to bottom, #000000, var(--bg-color));
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
     border-bottom: 2px solid var(--primary-color);
+    /* Animación de entrada rápida para el título */
+    animation: fadeInUp 0.8s ease-out forwards; 
 }
 
 h1 {
@@ -61,12 +80,30 @@ main {
 }
 
 .service-section {
-    background-color: var(--surface-color);
+    background-color: rgba(20, 20, 20, 0.8); /* Ligeramente transparente para ver la textura debajo */
+    backdrop-filter: blur(5px);
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 10px;
     border: 1px solid #222;
+    opacity: 0; /* Empiezan invisibles para la animación */
+    
+    /* Configuración de la animación Hover */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
 }
+
+/* Efecto Hover: La caja se eleva y brilla */
+.service-section:hover {
+    transform: translateY(-10px); /* Sube 10 píxeles */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 102, 0, 0.15); /* Sombra negra profunda + Brillo naranja */
+    border-color: rgba(255, 102, 0, 0.4);
+}
+
+/* CASCADA DE ANIMACIONES (Cada sección tarda un poco más en aparecer) */
+.service-section:nth-child(1) { animation: fadeInUp 0.8s ease-out 0.2s forwards; }
+.service-section:nth-child(2) { animation: fadeInUp 0.8s ease-out 0.4s forwards; }
+.service-section:nth-child(3) { animation: fadeInUp 0.8s ease-out 0.6s forwards; }
+.service-section:nth-child(4) { animation: fadeInUp 0.8s ease-out 0.8s forwards; }
 
 h2 {
     color: var(--primary-color);
@@ -99,14 +136,18 @@ h3 {
     border-left: 3px solid var(--primary-color);
     background-color: rgba(255, 102, 0, 0.05);
     border-radius: 0 8px 8px 0;
+    transition: background-color 0.3s ease;
+}
+
+.sub-services article:hover {
+    background-color: rgba(255, 102, 0, 0.1);
 }
 
 /* =========================================
    SECCIÓN DOCUMENTALES
    ========================================= */
 .documentales-highlight {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 15px rgba(255, 102, 0, 0.1);
+    border-color: rgba(255, 102, 0, 0.3);
 }
 
 /* =========================================
@@ -115,6 +156,8 @@ h3 {
 .social-section {
     text-align: center;
     margin-top: 4rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 1s forwards; /* Es la última en aparecer */
 }
 
 .social-links {
@@ -141,6 +184,8 @@ h3 {
 .btn:hover, .contact-btn {
     background-color: var(--primary-color);
     color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
 }
 
 /* =========================================
@@ -152,4 +197,5 @@ footer {
     font-size: 0.9rem;
     color: #666;
     border-top: 1px solid #222;
+    margin-top: 4rem;
 }
