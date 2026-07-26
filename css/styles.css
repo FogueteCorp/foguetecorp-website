@@ -366,14 +366,25 @@ nav {
 /* Social Networks Section */
 .social-section {
     background-color: var(--primary-dark);
-    padding: 6rem 2rem;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
 }
 
 .social-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -381,80 +392,52 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    padding: 2rem;
+    gap: 0.5rem;
+    padding: 0.9rem 1rem;
     border: 1px solid var(--border-dark);
     text-decoration: none;
     color: var(--text-primary);
     transition: all 0.3s ease;
     background-color: var(--secondary-dark);
-    position: relative;
-    overflow: hidden;
-}
-
-/* Regla especial para móviles: fuerza una sola línea ocultando el texto y dejando solo los iconos centrados */
-@media (max-width: 650px) {
-    .social-links {
-        gap: 0.75rem;
-    }
-    .social-link {
-        padding: 1rem;
-        flex: 1;
-        justify-content: center;
-    }
-    .social-name {
-        display: none;
-    }
-}
-
-.social-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at center, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    border-radius: 6px;
+    flex: 1 1 0;
+    min-width: 0; /* Imprescindible para que los elementos flexibles se reduzcan sin romper la fila */
 }
 
 .social-link:hover {
     border-color: var(--accent-orange);
-    background-color: rgba(255, 107, 53, 0.05);
-    transform: scale(1.05);
-    box-shadow: 0 8px 24px rgba(255, 107, 53, 0.2);
+    color: var(--accent-orange);
+    transform: translateY(-2px);
 }
 
-.social-link:hover::before {
-    opacity: 1;
-}
-
-.social-icon {
-    width: 32px;
-    height: 32px;
-    stroke: var(--text-primary);
-    transition: stroke 0.3s ease;
-}
-
-.social-link:hover .social-icon {
-    stroke: var(--accent-orange);
-}
-
-.social-link:hover .social-icon-fill {
-    fill: var(--accent-orange);
-}
-
-.social-icon-fill {
-    fill: var(--text-primary);
-    transition: fill 0.3s ease;
+.social-icon, .social-icon-fill {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
 }
 
 .social-name {
-    font-size: 1.1rem;
-    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
+/* Forzar una sola línea y ocultar texto en móviles */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 0.35rem;
+        padding: 0;
+    }
+
+    .social-link {
+        padding: 0.75rem 0.2rem;
+        gap: 0;
+    }
+
+    .social-name {
+        display: none; /* Oculta el nombre en móviles para garantizar que entren todos en la misma fila */
+    }
+}
 
 
 
