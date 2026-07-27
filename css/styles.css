@@ -265,11 +265,8 @@ main { position: relative; }
 }
 
 .service-inner {
-    position: relative;
-    z-index: 2;
-    max-width: 750px;
+    max-width: 900px;
     margin: 0 auto;
-    text-align: center;
 }
 
 
