@@ -258,11 +258,15 @@ header .subtitle {
 main { position: relative; }
 
 .service-section {
-    max-width: 900px;
-    margin: 0 auto;
+    width: 100%;
     padding: 5rem 2rem;
     border-bottom: 1px solid var(--border-dark);
     position: relative;
+}
+
+.service-inner {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .service-section:nth-of-type(odd) { background-color: var(--primary-dark); }
