@@ -1,166 +1,363 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional athlete portfolio showcasing achievements, gallery, and contact information">
-    <meta name="author" content="Athlete Name">
-    <title>Foguete Movement | Capoeira & Documentaries</title>
+    <meta name="description" content="Foguete Movement - Clases particulares de Capoeira en San Sebastián de los Reyes, Madrid (online y a domicilio), Shows acrobáticos, Talleres de movimiento y Documentales de Culturas del Combate.">
+    <meta name="keywords" content="capoeira, capoeira madrid, capoeira san sebastián de los reyes, clases capoeira, shows capoeira, talleres de movimiento, documental culturas del combate">
+    <title>Foguete Movement | Capoeira en San Sebastián de los Reyes, Madrid</title>
+
+    <!-- Favicon: inline SVG, orange "F" on dark background — swap for your own icon anytime -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f0f0f'/><text x='50' y='68' font-family='Arial, sans-serif' font-size='60' font-weight='700' fill='%23ff6b35' text-anchor='middle'>F</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- External stylesheet — save styles.css inside a css/ folder next to this file -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
-    
 <body>
-    <!-- Header Navigation -->
-    <header>
-        <nav>
-            <div class="logo">Foguete <span style="color: var(--accent-orange);">Movement</span></div>
+    <!-- SEO: Structured data — Person offering multiple services -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Foguete",
+      "jobTitle": "Instructor de Capoeira",
+      "description": "Clases de capoeira, shows acrobáticos, talleres de movimiento y proyecto documental sobre culturas del combate.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Sebastián de los Reyes",
+        "addressRegion": "Madrid",
+        "addressCountry": "ES"
+      },
+      "areaServed": "San Sebastián de los Reyes, Madrid",
+      "sameAs": [
+        "https://instagram.com/yourprofile",
+        "https://youtube.com/yourprofile",
+        "https://tiktok.com/yourprofile"
+      ]
+    }
+    </script>
+
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">Foguete</a>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#social">Socials</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#clases" data-i18n="nav_clases">Clases</a></li>
+                <li><a href="#shows" data-i18n="nav_shows">Shows</a></li>
+                <li><a href="#talleres" data-i18n="nav_talleres">Talleres</a></li>
+                <li><a href="#documentales" data-i18n="nav_documentales">Documentales</a></li>
+                <li><a href="#redes" data-i18n="nav_contacto">Contacto</a></li>
             </ul>
-        </nav>
+            <!-- Language switcher -->
+            <div class="lang-switcher" role="group" aria-label="Language selector">
+                <button class="lang-btn active" data-lang="es" aria-pressed="true">ES</button>
+                <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+                <button class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+                <button class="lang-btn" data-lang="pt" aria-pressed="false">PT</button>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Foguete Movement</h1>
+        <p class="subtitle" data-i18n="hero_subtitle">Capoeira, Movimiento y Cine Documental</p>
     </header>
 
-    <!-- Hero Section with Background -->
-    <section class="hero">
-        <div class="hero-background">
-            <!-- Replace this with: style="background-image: url('images/hero/hero-background.jpg');" -->
-        </div>
-        <div class="hero-content">
-            <h1>Athlete Name</h1>
-            <p>Professional athlete dedicated to excellence, performance, and inspiring the next generation.</p>
-            <div class="hero-placeholder">Add your action shot as background (style="background-image: url('images/hero/hero-background.jpg');")</div>
-            <section class="hero" style="background-image: url('images/hero/hero-background.jpg');"></section>
-        </div>
-    </section>
+    <main>
+        <!-- About Me -->
+        <section id="about" class="about-section reveal">
+            <h2 data-i18n="about_heading">Sobre Foguete</h2>
+            <p data-i18n="about_text">Practico y enseño capoeira desde hace más de una década, formado en distintos grupos y tradiciones del arte. Doy clases en San Sebastián de los Reyes, Madrid, y hoy comparto ese camino a través de clases, shows en vivo, talleres de movimiento y un proyecto documental que explora las culturas del combate en todo el mundo.</p>
+        </section>
 
-    <!-- Profile/About Section -->
-    <section id="about" class="profile-section">
-        <div class="profile-container">
-            <div class="profile-image">
-                <!-- Replace with: <img src="images/profile/profile-photo.jpg" alt="Athlete Name" style="width: 100%; height: 100%; object-fit: cover;"> -->
-                <div style="text-align: center; padding: 2rem;">
-                    <p>Profile Photo</p>
-                    <p style="font-size: 0.8rem; margin-top: 0.5rem;">Add professional portrait here</p>
-                </div>
-            </div>
-            <div class="profile-content">
-                <h2>About Me</h2>
-                <p>I am a dedicated professional athlete with a passion for pushing boundaries and achieving excellence in every competition. My journey has been defined by hard work, discipline, and an unwavering commitment to my sport.</p>
-                <p>Through years of training and competition, I've learned that success comes from the combination of physical preparation, mental fortitude, and the support of an incredible team.</p>
-                
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Years Pro</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">50+</span>
-                        <span class="stat-label">Competitions</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">15</span>
-                        <span class="stat-label">Championships</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Clases -->
+        <section id="clases" class="service-section reveal">
+            <span class="service-number">01</span>
+            <h2 data-i18n="clases_heading">Clases Particulares de Capoeira</h2>
+            <p data-i18n="clases_text">Aprende capoeira adaptada a tu nivel. Trabajo la técnica, la expresión corporal y la musicalidad de forma personalizada.</p>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery-section">
-        <div class="gallery-container">
-            <h2 class="section-title">Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <!-- Replace with: <img src="images/gallery/training-01.jpg" alt="Training" style="width: 100%; height: 100%; object-fit: cover;"> -->
-                    <p>Training Photo 1</p>
-                </div>
-                <div class="gallery-item">
-                    <!-- Replace with: <img src="images/gallery/competition-02.jpg" alt="Competition" style="width: 100%; height: 100%; object-fit: cover;"> -->
-                    <p>Competition Photo 2</p>
-                </div>
-                <div class="gallery-item">
-                    <!-- Replace with: <img src="images/gallery/victory-03.jpg" alt="Victory" style="width: 100%; height: 100%; object-fit: cover;"> -->
-                    <p>Victory Photo 3</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Networks Section -->
-    <section id="social" class="social-section">
-            <h2 class="section-title">Follow Me</h2>
-            <div class="social-links">
-                <a href="https://instagram.com" class="social-link" target="_blank" rel="noopener noreferrer">
-                    <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                    <span class="social-name">Instagram</span>
-                </a>
-    
-                <a href="https://twitter.com" class="social-link" target="_blank" rel="noopener noreferrer">
-                    <svg class="social-icon-fill" viewBox="0 0 24 24" width="32" height="32">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                    </svg>
-                    <span class="social-name">X (Twitter)</span>
-                </a>
-    
-                <a href="https://youtube.com" class="social-link" target="_blank" rel="noopener noreferrer">
-                    <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-                        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                    </svg>
-                    <span class="social-name">YouTube</span>
-                </a>
-    
-                <a href="https://tiktok.com" class="social-link" target="_blank" rel="noopener noreferrer">
-                    <svg class="social-icon-fill" viewBox="0 0 24 24" width="32" height="32">
-                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-                    </svg>
-                    <span class="social-name">TikTok</span>
-                </a>
+            <div class="sub-services">
+                <article>
+                    <h3 data-i18n="clases_online_heading">Clases Online</h3>
+                    <p data-i18n="clases_online_text">Entrena desde cualquier parte del mundo con seguimiento y correcciones en directo.</p>
+                </article>
+                <article>
+                    <h3 data-i18n="clases_presencial_heading">Presencial y a Domicilio</h3>
+                    <p data-i18n="clases_presencial_text">Clases privadas en tu espacio o al aire libre para un progreso rápido, seguro y enfocado en tus objetivos.</p>
+                </article>
             </div>
         </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="contact-container">
-            <div class="contact-image">
-                <!-- Replace with: <img src="images/contact/contact-photo.jpg" alt="Contact" style="width: 100%; height: 100%; object-fit: cover;"> -->
-                <div style="text-align: center; padding: 2rem;">
-                    <p>Contact Photo</p>
-                    <p style="font-size: 0.8rem; margin-top: 0.5rem;">Add photo here</p>
-                </div>
-            </div>
-            <div class="contact-form-wrapper">
-                <h2>Contact</h2>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn"><span>Send Message</span></button>
-                </form>
-            </div>
-        </div>
-    </section>
+        <!-- Shows -->
+        <section id="shows" class="service-section reveal">
+            <span class="service-number">02</span>
+            <h2 data-i18n="shows_heading">Shows de Capoeira & Acrobacias</h2>
+            <p data-i18n="shows_text">Espectáculos llenos de energía, música y acrobacias de alto impacto para eventos, festivales y proyectos corporativos.</p>
+            <!-- Replace with: <img src="show-photo.jpg" alt="Show de capoeira y acrobacias"> -->
+            <div class="media-frame" data-i18n="shows_media_placeholder">Foto o video del show aquí</div>
+        </section>
 
-    <!-- Footer -->
+        <!-- Talleres -->
+        <section id="talleres" class="service-section reveal">
+            <span class="service-number">03</span>
+            <h2 data-i18n="talleres_heading">Talleres de Movimiento</h2>
+            <p data-i18n="talleres_text">Sesiones lúdicas y dinámicas de capoeira para distintos grupos de edad, adaptando el juego, el ritmo y el trabajo en equipo a cada etapa.</p>
+
+            <div class="sub-services">
+                <article>
+                    <h3 data-i18n="talleres_infantil_heading">Infantil</h3>
+                    <p data-i18n="talleres_infantil_text">Los niños desarrollan psicomotricidad, ritmo y trabajo en equipo a través del juego y la capoeira.</p>
+                </article>
+                <article>
+                    <h3 data-i18n="talleres_adolescentes_heading">Adolescentes</h3>
+                    <p data-i18n="talleres_adolescentes_text">Espacios de movimiento, disciplina y confianza para adolescentes, combinando técnica y expresión corporal.</p>
+                </article>
+                <article>
+                    <h3 data-i18n="talleres_adultos_heading">Adultos / Iniciación</h3>
+                    <p data-i18n="talleres_adultos_text">Introducción accesible a la capoeira para adultos sin experiencia previa, a su propio ritmo.</p>
+                </article>
+            </div>
+            <!-- Replace with: <img src="taller-photo.jpg" alt="Taller de movimiento y capoeira"> -->
+            <div class="media-frame" data-i18n="talleres_media_placeholder">Foto del taller aquí</div>
+        </section>
+
+        <!-- Documentales -->
+        <section id="documentales" class="documentales-highlight reveal">
+            <div class="letterbox-bar top"></div>
+            <div class="letterbox-bar bottom"></div>
+            <div class="documentales-inner">
+                <span class="documentales-tag" data-i18n="documentales_tag">En Desarrollo</span>
+                <h2 data-i18n="documentales_heading">Foguete Movement: Documentales</h2>
+                <p data-i18n="documentales_text">Explorando las culturas del combate y las historias humanas detrás del movimiento. Un proyecto cinematográfico en desarrollo, dando voz a las tradiciones y a quienes las mantienen vivas.</p>
+                <!-- Replace with: <img src="documental-still.jpg" alt="Fotograma del documental Foguete Movement"> -->
+                <div class="media-frame cinematic" data-i18n="documentales_media_placeholder">Fotograma o tráiler del documental aquí</div>
+            </div>
+        </section>
+
+        <!-- Redes y Contacto -->
+        <section id="redes" class="social-section reveal">
+            <h2 data-i18n="social_heading">Mis Redes y Contacto</h2>
+            <div class="social-links">
+                <a href="https://instagram.com/yourprofile" class="btn" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://youtube.com/yourprofile" class="btn" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <a href="https://tiktok.com/yourprofile" class="btn" target="_blank" rel="noopener noreferrer">TikTok</a>
+                <a href="mailto:tu-email@ejemplo.com" class="btn contact-btn" data-i18n="btn_contact">Contáctame</a>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2026 Foguete Movement. All rights reserved.</p>
-        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Capoeira Instructor - San Sebastián de los Reyes, Madrid, Spain</p>
+        <p data-i18n="footer_rights">&copy; 2026 Foguete Movement. Todos los derechos reservados.</p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;" data-i18n="footer_location">Clases de Capoeira en San Sebastián de los Reyes, Madrid</p>
     </footer>
+
+    <!-- Scroll-reveal -->
+    <script>
+        (function () {
+            var targets = document.querySelectorAll('.reveal');
+            if (!('IntersectionObserver' in window) || targets.length === 0) {
+                targets.forEach(function (el) { el.classList.add('is-visible'); });
+                return;
+            }
+            var observer = new IntersectionObserver(function (entries, obs) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+            targets.forEach(function (el) { observer.observe(el); });
+        })();
+    </script>
+
+    <!-- Language switcher: ES / EN / FR / PT -->
+    <script>
+        var translations = {
+            es: {
+                title: "Foguete Movement | Capoeira en San Sebastián de los Reyes, Madrid",
+                nav_clases: "Clases",
+                nav_shows: "Shows",
+                nav_talleres: "Talleres",
+                nav_documentales: "Documentales",
+                nav_contacto: "Contacto",
+                hero_subtitle: "Capoeira, Movimiento y Cine Documental",
+                about_heading: "Sobre Foguete",
+                about_text: "Practico y enseño capoeira desde hace más de una década, formado en distintos grupos y tradiciones del arte. Doy clases en San Sebastián de los Reyes, Madrid, y hoy comparto ese camino a través de clases, shows en vivo, talleres de movimiento y un proyecto documental que explora las culturas del combate en todo el mundo.",
+                clases_heading: "Clases Particulares de Capoeira",
+                clases_text: "Aprende capoeira adaptada a tu nivel. Trabajo la técnica, la expresión corporal y la musicalidad de forma personalizada.",
+                clases_online_heading: "Clases Online",
+                clases_online_text: "Entrena desde cualquier parte del mundo con seguimiento y correcciones en directo.",
+                clases_presencial_heading: "Presencial y a Domicilio",
+                clases_presencial_text: "Clases privadas en tu espacio o al aire libre para un progreso rápido, seguro y enfocado en tus objetivos.",
+                shows_heading: "Shows de Capoeira & Acrobacias",
+                shows_text: "Espectáculos llenos de energía, música y acrobacias de alto impacto para eventos, festivales y proyectos corporativos.",
+                shows_media_placeholder: "Foto o video del show aquí",
+                talleres_heading: "Talleres de Movimiento",
+                talleres_text: "Sesiones lúdicas y dinámicas de capoeira para distintos grupos de edad, adaptando el juego, el ritmo y el trabajo en equipo a cada etapa.",
+                talleres_infantil_heading: "Infantil",
+                talleres_infantil_text: "Los niños desarrollan psicomotricidad, ritmo y trabajo en equipo a través del juego y la capoeira.",
+                talleres_adolescentes_heading: "Adolescentes",
+                talleres_adolescentes_text: "Espacios de movimiento, disciplina y confianza para adolescentes, combinando técnica y expresión corporal.",
+                talleres_adultos_heading: "Adultos / Iniciación",
+                talleres_adultos_text: "Introducción accesible a la capoeira para adultos sin experiencia previa, a su propio ritmo.",
+                talleres_media_placeholder: "Foto del taller aquí",
+                documentales_tag: "En Desarrollo",
+                documentales_heading: "Foguete Movement: Documentales",
+                documentales_text: "Explorando las culturas del combate y las historias humanas detrás del movimiento. Un proyecto cinematográfico en desarrollo, dando voz a las tradiciones y a quienes las mantienen vivas.",
+                documentales_media_placeholder: "Fotograma o tráiler del documental aquí",
+                social_heading: "Mis Redes y Contacto",
+                btn_contact: "Contáctame",
+                footer_rights: "© 2026 Foguete Movement. Todos los derechos reservados.",
+                footer_location: "Clases de Capoeira en San Sebastián de los Reyes, Madrid"
+            },
+            en: {
+                title: "Foguete Movement | Capoeira in San Sebastián de los Reyes, Madrid",
+                nav_clases: "Classes",
+                nav_shows: "Shows",
+                nav_talleres: "Workshops",
+                nav_documentales: "Documentary",
+                nav_contacto: "Contact",
+                hero_subtitle: "Capoeira, Movement and Documentary Film",
+                about_heading: "About Foguete",
+                about_text: "I have practiced and taught capoeira for over a decade, trained across different groups and traditions of the art. I teach classes in San Sebastián de los Reyes, Madrid, and today I share this journey through classes, live shows, movement workshops, and a documentary project exploring combat cultures around the world.",
+                clases_heading: "Private Capoeira Classes",
+                clases_text: "Learn capoeira adapted to your level. I work on technique, body expression, and musicality in a personalized way.",
+                clases_online_heading: "Online Classes",
+                clases_online_text: "Train from anywhere in the world with live follow-up and corrections.",
+                clases_presencial_heading: "In-Person & At-Home",
+                clases_presencial_text: "Private classes at your space or outdoors for fast, safe progress focused on your goals.",
+                shows_heading: "Capoeira & Acrobatics Shows",
+                shows_text: "Shows full of energy, music, and high-impact acrobatics for events, festivals, and corporate projects.",
+                shows_media_placeholder: "Show photo or video here",
+                talleres_heading: "Movement Workshops",
+                talleres_text: "Playful, dynamic capoeira sessions for different age groups, adapting play, rhythm, and teamwork to each stage.",
+                talleres_infantil_heading: "Kids",
+                talleres_infantil_text: "Children develop motor skills, rhythm, and teamwork through play and capoeira.",
+                talleres_adolescentes_heading: "Teens",
+                talleres_adolescentes_text: "Movement, discipline, and confidence-building spaces for teenagers, combining technique and body expression.",
+                talleres_adultos_heading: "Adults / Beginners",
+                talleres_adultos_text: "An accessible introduction to capoeira for adults with no prior experience, at their own pace.",
+                talleres_media_placeholder: "Workshop photo here",
+                documentales_tag: "In Development",
+                documentales_heading: "Foguete Movement: Documentary",
+                documentales_text: "Exploring combat cultures and the human stories behind movement. A film project in development, giving voice to traditions and those who keep them alive.",
+                documentales_media_placeholder: "Documentary still or trailer here",
+                social_heading: "My Socials & Contact",
+                btn_contact: "Contact Me",
+                footer_rights: "© 2026 Foguete Movement. All rights reserved.",
+                footer_location: "Capoeira Classes in San Sebastián de los Reyes, Madrid"
+            },
+            fr: {
+                title: "Foguete Movement | Capoeira à San Sebastián de los Reyes, Madrid",
+                nav_clases: "Cours",
+                nav_shows: "Spectacles",
+                nav_talleres: "Ateliers",
+                nav_documentales: "Documentaire",
+                nav_contacto: "Contact",
+                hero_subtitle: "Capoeira, Mouvement et Cinéma Documentaire",
+                about_heading: "À propos de Foguete",
+                about_text: "Je pratique et enseigne la capoeira depuis plus de dix ans, formé au sein de différents groupes et traditions de cet art. Je donne des cours à San Sebastián de los Reyes, Madrid, et je partage aujourd'hui ce parcours à travers des cours, des spectacles en direct, des ateliers de mouvement et un projet documentaire qui explore les cultures du combat à travers le monde.",
+                clases_heading: "Cours Particuliers de Capoeira",
+                clases_text: "Apprenez la capoeira adaptée à votre niveau. Je travaille la technique, l'expression corporelle et la musicalité de façon personnalisée.",
+                clases_online_heading: "Cours en Ligne",
+                clases_online_text: "Entraînez-vous depuis n'importe où dans le monde avec un suivi et des corrections en direct.",
+                clases_presencial_heading: "En Présentiel et à Domicile",
+                clases_presencial_text: "Cours privés chez vous ou en extérieur pour progresser rapidement, en sécurité et selon vos objectifs.",
+                shows_heading: "Spectacles de Capoeira & Acrobaties",
+                shows_text: "Des spectacles pleins d'énergie, de musique et d'acrobaties spectaculaires pour événements, festivals et projets d'entreprise.",
+                shows_media_placeholder: "Photo ou vidéo du spectacle ici",
+                talleres_heading: "Ateliers de Mouvement",
+                talleres_text: "Des séances ludiques et dynamiques de capoeira pour différents groupes d'âge, adaptant le jeu, le rythme et le travail d'équipe à chaque étape.",
+                talleres_infantil_heading: "Enfants",
+                talleres_infantil_text: "Les enfants développent leur motricité, leur sens du rythme et le travail d'équipe à travers le jeu et la capoeira.",
+                talleres_adolescentes_heading: "Adolescents",
+                talleres_adolescentes_text: "Des espaces de mouvement, de discipline et de confiance pour les adolescents, alliant technique et expression corporelle.",
+                talleres_adultos_heading: "Adultes / Initiation",
+                talleres_adultos_text: "Une initiation accessible à la capoeira pour les adultes sans expérience préalable, à leur propre rythme.",
+                talleres_media_placeholder: "Photo de l'atelier ici",
+                documentales_tag: "En Développement",
+                documentales_heading: "Foguete Movement : Documentaire",
+                documentales_text: "Explorer les cultures du combat et les histoires humaines derrière le mouvement. Un projet cinématographique en développement, donnant la parole aux traditions et à ceux qui les font vivre.",
+                documentales_media_placeholder: "Photo ou bande-annonce du documentaire ici",
+                social_heading: "Mes Réseaux et Contact",
+                btn_contact: "Me Contacter",
+                footer_rights: "© 2026 Foguete Movement. Tous droits réservés.",
+                footer_location: "Cours de Capoeira à San Sebastián de los Reyes, Madrid"
+            },
+            pt: {
+                title: "Foguete Movement | Capoeira em San Sebastián de los Reyes, Madrid",
+                nav_clases: "Aulas",
+                nav_shows: "Shows",
+                nav_talleres: "Oficinas",
+                nav_documentales: "Documentário",
+                nav_contacto: "Contato",
+                hero_subtitle: "Capoeira, Movimento e Cinema Documental",
+                about_heading: "Sobre Foguete",
+                about_text: "Pratico e ensino capoeira há mais de uma década, formado em diferentes grupos e tradições da arte. Dou aulas em San Sebastián de los Reyes, Madrid, e hoje compartilho essa jornada através de aulas, shows ao vivo, oficinas de movimento e um projeto documental que explora as culturas do combate ao redor do mundo.",
+                clases_heading: "Aulas Particulares de Capoeira",
+                clases_text: "Aprenda capoeira adaptada ao seu nível. Trabalho a técnica, a expressão corporal e a musicalidade de forma personalizada.",
+                clases_online_heading: "Aulas Online",
+                clases_online_text: "Treine de qualquer lugar do mundo com acompanhamento e correções ao vivo.",
+                clases_presencial_heading: "Presencial e a Domicílio",
+                clases_presencial_text: "Aulas privadas no seu espaço ou ao ar livre para um progresso rápido, seguro e focado nos seus objetivos.",
+                shows_heading: "Shows de Capoeira & Acrobacias",
+                shows_text: "Espetáculos cheios de energia, música e acrobacias de alto impacto para eventos, festivais e projetos corporativos.",
+                shows_media_placeholder: "Foto ou vídeo do show aqui",
+                talleres_heading: "Oficinas de Movimento",
+                talleres_text: "Sessões lúdicas e dinâmicas de capoeira para diferentes faixas etárias, adaptando o jogo, o ritmo e o trabalho em equipe a cada etapa.",
+                talleres_infantil_heading: "Infantil",
+                talleres_infantil_text: "As crianças desenvolvem psicomotricidade, ritmo e trabalho em equipe através do jogo e da capoeira.",
+                talleres_adolescentes_heading: "Adolescentes",
+                talleres_adolescentes_text: "Espaços de movimento, disciplina e confiança para adolescentes, combinando técnica e expressão corporal.",
+                talleres_adultos_heading: "Adultos / Iniciação",
+                talleres_adultos_text: "Introdução acessível à capoeira para adultos sem experiência prévia, no seu próprio ritmo.",
+                talleres_media_placeholder: "Foto da oficina aqui",
+                documentales_tag: "Em Desenvolvimento",
+                documentales_heading: "Foguete Movement: Documentário",
+                documentales_text: "Explorando as culturas do combate e as histórias humanas por trás do movimento. Um projeto cinematográfico em desenvolvimento, dando voz às tradições e a quem as mantém vivas.",
+                documentales_media_placeholder: "Still ou trailer do documentário aqui",
+                social_heading: "Minhas Redes e Contato",
+                btn_contact: "Fale Comigo",
+                footer_rights: "© 2026 Foguete Movement. Todos os direitos reservados.",
+                footer_location: "Aulas de Capoeira em San Sebastián de los Reyes, Madrid"
+            }
+        };
+
+        function setLanguage(lang) {
+            var dict = translations[lang];
+            if (!dict) return;
+
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var key = el.getAttribute('data-i18n');
+                if (dict[key] !== undefined) {
+                    el.textContent = dict[key];
+                }
+            });
+
+            document.title = dict.title;
+            document.documentElement.setAttribute('lang', lang);
+
+            document.querySelectorAll('.lang-btn').forEach(function (btn) {
+                var isActive = btn.getAttribute('data-lang') === lang;
+                btn.classList.toggle('active', isActive);
+                btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            });
+
+            // NOTE: to remember the visitor's language choice across page reloads
+            // once this file is hosted on your own server, add:
+            // localStorage.setItem('foguete_lang', lang);
+            // (browser storage is disabled in this preview environment)
+        }
+
+        document.querySelectorAll('.lang-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                setLanguage(btn.getAttribute('data-lang'));
+            });
+        });
+    </script>
+</body>
+</html>
