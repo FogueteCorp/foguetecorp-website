@@ -265,9 +265,14 @@ main { position: relative; }
 }
 
 .service-inner {
-    max-width: 900px;
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
     margin: 0 auto;
+    text-align: center;
 }
+
+
 
 .service-section:nth-of-type(odd) { background-color: var(--primary-dark); }
 .service-section:nth-of-type(even) { background-color: var(--secondary-dark); }
