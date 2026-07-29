@@ -256,8 +256,7 @@ header {
     padding: 8rem 2rem 6rem;
     text-align: center;
     background-color: var(--secondary-dark);
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%25" stop-color="%232a1a14"/><stop offset="100%25" stop-color="%231a1a1a"/></linearGradient></defs><rect width="1600" height="900" fill="url(%23g)"/><text x="50%25" y="50%25" font-family="Arial, sans-serif" font-size="48" fill="%23ff6b35" text-anchor="middle" dominant-baseline="middle" opacity="0.5">TEST IMAGE</text></svg>');
-    background-size: cover;
+    background-image: url('../img/IMG_00892.jpg');background-size: cover;
     background-position: center;
     position: relative;
     overflow: hidden;
