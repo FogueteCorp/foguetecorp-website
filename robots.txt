@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://foguetemovement.com/sitemap.xml
