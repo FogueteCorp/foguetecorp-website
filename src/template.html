@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{META_DESC}}">
+    <meta name="keywords" content="{{META_KEYWORDS}}">
+    <title>{{TITLE}}</title>
+    <link rel="canonical" href="{{URL}}">
+{{HREFLANG}}
+
+    <!-- ============ Open Graph (WhatsApp, Facebook, LinkedIn, Instagram) ============ -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Foguete Movement">
+    <meta property="og:url" content="{{URL}}">
+    <meta property="og:title" content="{{OG_TITLE}}">
+    <meta property="og:description" content="{{OG_DESC}}">
+    <!-- IMPORTANTE: sube una imagen 1200x630 px a la raíz del sitio con este nombre.
+         Sin ella el enlace se compartirá sin miniatura. Usa una foto tuya de capoeira. -->
+    <meta property="og:image" content="https://foguetemovement.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Foguete en un movimiento de capoeira">
+{{OG_LOCALE_BLOCK}}
+
+    <!-- ============ Twitter / X Card ============ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{OG_TITLE}}">
+    <meta name="twitter:description" content="{{OG_DESC}}">
+    <meta name="twitter:image" content="https://foguetemovement.com/og-image.jpg">
+
+    <link rel="icon" type="image/svg+xml" href="{{BASE}}favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{BASE}}css/styles.css">
+</head>
+<body>
+    <!-- SEO: Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Foguete",
+      "url": "https://foguetemovement.com/",
+      "jobTitle": "Instructor de Capoeira",
+      "knowsLanguage": ["es", "fr", "pt", "en"],
+      "description": "{{OG_DESC}}",
+      "inLanguage": "{{LANG}}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Sebastián de los Reyes",
+        "addressRegion": "Madrid",
+        "addressCountry": "ES"
+      },
+      "areaServed": "San Sebastián de los Reyes, Madrid",
+      "sameAs": [
+        "https://instagram.com/foguetemovement",
+        "https://youtube.com/@foguetemovement",
+        "https://tiktok.com/@foguetemovement"
+      ]
+    }
+    </script>
+
+    <nav class="top-nav">
+        <div class="nav-container" id="navContainer">
+            <a href="#" class="logo" aria-label="Foguete Movement">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 60" role="img" aria-hidden="true">
+                    <defs>
+                        <style>
+                            .brand-name { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 18px; fill: #e8e6e3; letter-spacing: 2.5px; }
+                            .brand-sub { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-weight: 600; font-size: 8.5px; fill: #685b4e; letter-spacing: 5px; }
+                            .rocket-primary { fill: #ed7117; }
+                            .rocket-secondary { fill: #685b4e; }
+                        </style>
+                    </defs>
+                    <g transform="translate(6, 6) scale(0.7) rotate(30, -2.5, 50)">
+                        <path class="rocket-secondary" d="M12 28 C 8 28, 4 33, 6 40 C 9 37, 12 32, 13 28 Z" />
+                        <path class="rocket-secondary" d="M24 28 C 28 28, 32 33, 30 40 C 27 37, 24 32, 23 28 Z" />
+                        <path class="rocket-primary" d="M18 2 C 11 15, 11 30, 18 46 C 25 30, 25 15, 18 2 Z" />
+                        <path class="rocket-secondary" d="M18 46 C 17 50, 18 54, 18 54 C 18 54, 19 50, 18 46 Z" />
+                    </g>
+                    <text x="48" y="34" class="brand-name">FOGUETE</text>
+                    <text x="50" y="48" class="brand-sub">MOVEMENT</text>
+                </svg>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#clases" data-i18n="nav_clases">Clases</a></li>
+                <li><a href="#talleres" data-i18n="nav_talleres">Talleres</a></li>
+                <li><a href="#shows" data-i18n="nav_shows">Shows</a></li>
+                <li><a href="#documentales" data-i18n="nav_documentales">Documentales</a></li>
+                <li><a href="#redes" data-i18n="nav_contacto">Contacto</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="lang-switcher" id="langSwitcher">
+                    <button class="lang-trigger" id="langTrigger" data-lang="{{LANG}}" aria-haspopup="listbox" aria-expanded="false">
+                        <span id="langTriggerCode">{{LANG_UPPER}}</span>
+                        <svg class="lang-chevron" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                        <span class="lang-flag-strip"></span>
+                    </button>
+                    <ul class="lang-menu" id="langMenu">
+{{LANG_MENU}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Foguete Movement</h1>
+        <p class="subtitle" data-i18n="hero_subtitle">Capoeira, Movimiento y Documentales</p>
+        <!-- Hero quick-access social icons -->
+        <div class="hero-social">
+            <a href="https://instagram.com/foguetemovement" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" stroke-width="2">
+                    <rect class="hs-stroke" x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path class="hs-stroke" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line class="hs-stroke" x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <a href="https://youtube.com/@foguetemovement" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" stroke-width="2">
+                    <path class="hs-stroke" d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                    <polygon class="hs-fill" points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                </svg>
+            </a>
+            <a href="https://tiktok.com/@foguetemovement" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <svg viewBox="0 0 24 24">
+                    <path class="hs-fill" d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Me -->
+        <section id="about" class="about-section reveal">
+          <div class="about-inner">
+            <h2 data-i18n="about_heading">Sobre Foguete</h2>
+            <p data-i18n="about_text">Practico y enseño capoeira desde hace más de una década, formado en distintos grupos y países. Hoy comparto ese camino a través de clases, shows en vivo, talleres de movimiento y un proyecto documental que explora las culturas del combate en todo el mundo.</p>
+          </div>
+        </section>
+
+        <!-- 01 · Clases -->
+        <section id="clases" class="service-section reveal">
+          <div class="service-inner">
+            <span class="service-number">01</span>
+            <h2 data-i18n="clases_heading">Clases Particulares de Capoeira</h2>
+            <p data-i18n="clases_text">Aprende capoeira adaptada a tu nivel, trabajando la técnica, la expresión corporal y la musicalidad de forma personalizada.</p>
+            <div class="sub-services">
+                <article>
+                    <h3 data-i18n="clases_online_heading">Clases Online</h3>
+                    <p data-i18n="clases_online_text">Entrena desde cualquier parte del mundo con seguimiento y correcciones en directo.</p>
+                </article>
+                <article>
+                    <h3 data-i18n="clases_presencial_heading">Presencial y a Domicilio</h3>
+                    <p data-i18n="clases_presencial_text">Clases privadas en tu espacio o al aire libre, en San Sebastián de los Reyes y alrededores de Madrid, para un progreso rápido, seguro y enfocado en tus objetivos.</p>
+                </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- 02 · Talleres -->
+        <section id="talleres" class="service-section reveal">
+          <div class="service-inner">
+            <span class="service-number">02</span>
+            <h2 data-i18n="talleres_heading">Talleres de Movimiento</h2>
+            <p data-i18n="talleres_text">Sesiones lúdicas y dinámicas de capoeira, acrobacias y equilibrio para distintos grupos de edad, además de talleres puntuales para batizados y trocas de corda, festivales y otros eventos de capoeira.</p>
+            <div class="sub-services">
+                <article>
+                    <h3 data-i18n="talleres_infantil_heading">Infantil</h3>
+                    <p data-i18n="talleres_infantil_text">Los niños desarrollan psicomotricidad, ritmo y musicalidad a través del juego y la capoeira.</p>
+                </article>
+                <article>
+                    <h3 data-i18n="talleres_adolescentes_heading">Adolescentes</h3>
+                    <p data-i18n="talleres_adolescentes_text">Espacios de movimiento y disciplina para adolescentes, combinando técnica, acrobacias, arte marcial y esfuerzo físico.</p>
+                </article>
+                <article>
+                    <h3 data-i18n="talleres_adultos_heading">Adultos / Iniciación</h3>
+                    <p data-i18n="talleres_adultos_text">Espacio dedicado para adultos de todos los niveles, adaptado a su propio ritmo y progresión.</p>
+                </article>
+                <article>
+                    <h3 data-i18n="talleres_competicion_heading">Capoeira Competición</h3>
+                    <p data-i18n="talleres_competicion_text">Entrenamiento específico enfocado en el rendimiento, la estrategia de juego y la preparación para eventos competitivos de capoeira.</p>
+                </article>
+                <article>
+                    <h3 data-i18n="talleres_acrobacias_heading">Acrobacias y Equilibrio</h3>
+                    <p data-i18n="talleres_acrobacias_text">Clases enfocadas en el desarrollo de la agilidad, el control corporal, las acrobacias y la mejora del equilibrio dinámico.</p>
+                </article>
+                <article>
+                    <h3 data-i18n="talleres_eventos_heading">Talleres y Eventos</h3>
+                    <p data-i18n="talleres_eventos_text">Dar un taller a tu grupo, participar en tu roda o festival, o estar presente como invitado, colaboro en eventos de capoeira adaptándome a lo que necesites.</p>
+                </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- 03 · Shows -->
+        <section id="shows" class="service-section reveal">
+          <div class="service-inner">
+            <span class="service-number">03</span>
+            <h2 data-i18n="shows_heading">Shows de Capoeira &amp; Acrobacias</h2>
+            <p data-i18n="shows_text">Espectáculos en vivo llenos de energía, música en directo y acrobacias de alto impacto para festivales, celebraciones y eventos privados.</p>
+            <!-- Replace with: <img src="show-photo.jpg" alt="Show de capoeira y acrobacias"> -->
+            <!-- Or swap the whole div for: <div class="media-frame"><iframe src="YOUTUBE_EMBED_URL"></iframe></div> -->
+            <div class="media-frame" data-i18n="shows_media_placeholder">Foto o video del show aquí</div>
+          </div>
+        </section>
+
+        <!-- Documentales -->
+        <section id="documentales" class="documentales-highlight reveal">
+            <div class="documentales-inner">
+                <span class="documentales-tag" data-i18n="documentales_tag">En Desarrollo</span>
+                <h2 data-i18n="documentales_heading">Documentales &amp; Historias Humanas</h2>
+                <p data-i18n="documentales_text">Explorando las historias humanas detrás de las artes marciales ocultas. A través de mini-documentales sobre atletas de todo el mundo, os enseño el esfuerzo humano, las tradiciones que mantienen vivas estas disciplinas y el impacto profundo que tienen en su cultura.</p>
+                <!-- Replace with: <img src="documental-still.jpg" alt="Fotograma del documental Foguete Movement"> -->
+                <div class="media-frame cinematic" data-i18n="documentales_media_placeholder">Fotograma o tráiler del documental aquí</div>
+            </div>
+        </section>
+
+        <!-- Redes y Contacto -->
+        <section id="redes" class="social-section reveal">
+            <h2 data-i18n="social_heading">Mis Redes y Contacto</h2>
+            <div class="social-links">
+                <a href="https://instagram.com/foguetemovement" class="btn" target="_blank" rel="noopener noreferrer">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    <span class="social-text">
+                        <span class="social-name">Instagram</span>
+                        <span class="social-handle">@foguetemovement</span>
+                    </span>
+                </a>
+                <a href="https://youtube.com/@foguetemovement" class="btn" target="_blank" rel="noopener noreferrer">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                    </svg>
+                    <span class="social-text">
+                        <span class="social-name">YouTube</span>
+                        <span class="social-handle">@foguetemovement</span>
+                    </span>
+                </a>
+                <a href="https://tiktok.com/@foguetemovement" class="btn" target="_blank" rel="noopener noreferrer">
+                    <svg class="social-icon-fill" viewBox="0 0 24 24">
+                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                    </svg>
+                    <span class="social-text">
+                        <span class="social-name">TikTok</span>
+                        <span class="social-handle">@foguetemovement</span>
+                    </span>
+                </a>
+                <!-- Sin href: la dirección se ensambla por JS al final del body para
+                     que no aparezca en texto plano en el HTML (anti-recolectores de spam). -->
+                <a id="contactBtn" class="btn contact-btn" role="link" tabindex="0">
+                    <svg class="social-icon-fill" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    <span class="social-text">
+                        <span class="social-name" data-i18n="btn_contact">Contáctame</span>
+                    </span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-i18n="footer_rights">&copy; 2026 Foguete Movement. Todos los derechos reservados.</p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;" data-i18n="footer_location">Clases de Capoeira en San Sebastián de los Reyes, Madrid, España</p>
+    </footer>
+
+    <script src="{{BASE}}js/main.js"></script>
+</body>
+</html>
