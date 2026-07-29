@@ -1,9 +1,9 @@
 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'>
-<rect width='56' height='56' rx='12' fill='#0f0f0f'/>
+<rect width='56' height='56' rx='12' fill='#cfe2f0'/>
 <g transform='translate(-9.34,-18.17) scale(1.362) translate(9,3) scale(0.75) rotate(30, -2.5, 50)'>
-  <path fill='#685b4e' d='M12 28 C 8 28, 4 33, 6 40 C 9 37, 12 32, 13 28 Z'/>
-  <path fill='#685b4e' d='M24 28 C 28 28, 32 33, 30 40 C 27 37, 24 32, 23 28 Z'/>
-  <path fill='#ed7117' d='M18 2 C 11 15, 11 30, 18 46 C 25 30, 25 15, 18 2 Z'/>
-  <path fill='#685b4e' d='M18 46 C 17 50, 18 54, 18 54 C 18 54, 19 50, 18 46 Z'/>
+  <path fill='#1f5f93' d='M12 28 C 8 28, 4 33, 6 40 C 9 37, 12 32, 13 28 Z'/>
+  <path fill='#1f5f93' d='M24 28 C 28 28, 32 33, 30 40 C 27 37, 24 32, 23 28 Z'/>
+  <path fill='#c85a22' d='M18 2 C 11 15, 11 30, 18 46 C 25 30, 25 15, 18 2 Z'/>
+  <path fill='#1f5f93' d='M18 46 C 17 50, 18 54, 18 54 C 18 54, 19 50, 18 46 Z'/>
 </g>
 </svg>
